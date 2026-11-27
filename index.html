@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cafeteria</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="inicio" class="encabezado">
+
+        <nav class="navbar">
+        <a href="#inicio" class="logo">
+            ☕ CAFÉ LYON
+        </a>
+        <ul class="menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#menu">Menú</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+
+        </nav>
+
+        <section class="presentacion">
+            <h1> Un momento, un café, una experiencia.</h1>
+            <p>
+                En café LYON cada taza tiene una historia. Ven y disfruta de algo especial.
+            </p>
+
+            <a href="#menu" class="boton">
+                DESCUBRE NUESTRO MENÚ
+            </a>
+
+        </section>
+
+    </header>
+
+
+<!-- SECCION MENU -->
+
+<!-- SECCION MENU -->
+<section id="menu" class="seccion">
+
+    <h2>Nuestro Menú</h2>
+
+    <p class="descripcion">
+        Descubre nuestras deliciosas bebidas y postres.
+    </p>
+
+    <div class="productos-grid">
+
+        <div class="producto-card">
+            <img src="imagenes/capuchino.jpg" alt="Cappuccino">
+            <h3>Cappuccino</h3>
+            <p>Café espresso con leche cremosa.</p>
+            <p class="precio">$55.00 MXN</p>
+            <button class="ver-producto"
+                onclick="mostrarProducto('Cappuccino', 55, 'Café espresso acompañado de leche cremosa y espuma.', 'imagenes/capuchino.jpg')">
+                Ver producto
+            </button>
+        </div>
+
+        <div class="producto-card">
+            <img src="imagenes/latte.jpg" alt="Latte">
+            <h3>Latte</h3>
+            <p>Una combinación de café y leche.</p>
+            <p class="precio">$50.00 MXN</p>
+            <button class="ver-producto"
+                onclick="mostrarProducto('Latte', 50, 'Deliciosa combinación de café espresso y leche.', 'imagenes/latte.jpg')">
+                Ver producto
+            </button>
+        </div>
+
+        <div class="producto-card">
+            <img src="imagenes/frape.jpg" alt="Frappé">
+            <h3>Frappé</h3>
+            <p>Bebida fría y cremosa.</p>
+            <p class="precio">$65.00 MXN</p>
+            <button class="ver-producto"
+                onclick="mostrarProducto('Frappé', 65, 'Bebida fría y cremosa ideal para refrescarte.', 'imagenes/frape.jpg')">
+                Ver producto
+            </button>
+        </div>
+
+        <div class="producto-card">
+            <img src="imagenes/pastel.jpg" alt="Pastel">
+            <h3>Pastel</h3>
+            <p>Un postre para acompañar tu café.</p>
+            <p class="precio">$45.00 MXN</p>
+            <button class="ver-producto"
+                onclick="mostrarProducto('Pastel', 45, 'Delicioso pastel para acompañar tu bebida favorita.', 'imagenes/pastel.jpg')">
+                Ver producto
+            </button>
+        </div>
+
+    </div>
+
+    <!-- CARRITO -->
+    <div class="carrito">
+        <h2>Mi carrito</h2>
+        <p>Productos agregados: <span id="cantidadCarrito">0</span></p>
+        <p>Total: $<span id="totalCarrito">0.00</span> MXN</p>
+    </div>
+
+</section>
+
+
+<!-- VENTANA DE COMPRA -->
+<div id="ventanaProducto" class="ventana">
+
+    <div class="contenido-ventana">
+
+        <button class="cerrar" onclick="cerrarProducto()">X</button>
+
+        <img id="imagenProducto" src="" alt="Producto">
+
+        <div class="detalles-producto">
+
+            <h2 id="nombreProducto">Producto</h2>
+
+            <p id="descripcionProducto"></p>
+
+            <h3 id="precioProducto">$0.00 MXN</h3>
+
+            <label for="cantidadProducto">Cantidad:</label>
+
+            <input type="number" id="cantidadProducto"
+                value="1" min="1" max="20">
+
+            <button class="agregar-carrito" onclick="agregarCarrito()">
+                Agregar al carrito
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- SECCION NOSOTROS -->
+<section id="nosotros" class="seccion nosotros">
+
+    <h2>Sobre Nosotros</h2>
+
+    <p>
+        Un negocio familiar que busca ofrecer un espacio acogedor para disfrutar de un buen café y momentos agradables.
+    </p>
+
+    <p>
+        Nuestro objetivo es convertir cada visita en una experiencia
+        agradable que quieras repetir.
+    </p>
+
+</section>
+
+
+<!-- SECCION CONTACTO -->
+<section id="contacto" class="seccion contacto">
+
+    <h2>Contáctanos</h2>
+
+    <p>
+        ¿Tienes alguna pregunta o deseas más información?
+        ¡Estamos para atenderte!
+    </p>
+
+    <div class="datos-contacto">
+
+        <h3>Teléfono</h3>
+
+        <p>461 308 1303</p>
+
+        <div class="botones-contacto">
+
+            <a href="tel:4613081303" class="boton">
+                Llamar ahora
+            </a>
+
+            <a href="https://wa.me/524613081303"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="boton whatsapp">
+                Enviar WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</body>
+</html>

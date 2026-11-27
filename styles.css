@@ -1,0 +1,421 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F3E9D9;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("imagenes/cafeteria.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* BARRA DE NAVEGACION */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background-color: #F3E9D9;
+}
+
+.logo {
+    text-decoration: none;
+    color: #493323;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #493323;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #A47752;
+}
+
+/* PRESENTACION */
+
+.presentacion {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    color: white;
+}
+
+.presentacion h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.presentacion p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* BOTON */
+
+.boton {
+    text-decoration: none;
+    background-color: #65432F;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #A47752;
+}
+
+/* DISEÑO PARA CELULARES */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .presentacion h1 {
+        font-size: 34px;
+    }
+
+    .presentacion p {
+        font-size: 16px;
+    }
+}
+/* SECCIONES */
+
+.seccion {
+    min-height: 400px;
+    padding: 100px 30px;
+    text-align: center;
+    background-color: #F3E9D9;
+    color: #493323;
+}
+
+.seccion h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.seccion p {
+    font-size: 18px;
+}
+
+/* DESPLAZAMIENTO SUAVE */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ESPACIO PARA EL MENU FIJO */
+
+#inicio, #menu, #nosotros, #contacto {
+    scroll-margin-top: 90px;
+}
+
+
+/* DESCRIPCION DEL MENU */
+
+.descripcion {
+    margin-bottom: 40px;
+}
+
+/* TARJETAS DE PRODUCTOS */
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+}
+
+.producto-card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+    transition: transform 0.3s;
+}
+
+.producto-card:hover {
+    transform: translateY(-8px);
+}
+
+.producto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.producto-card h3 {
+    color: #65432F;
+    font-size: 22px;
+    margin: 20px 10px 10px;
+}
+
+.producto-card p {
+    color: #765C47;
+    font-size: 15px;
+    padding: 0 15px 25px;
+    line-height: 1.6;
+}
+
+/* SECCION NOSOTROS */
+
+.nosotros {
+    background-color: #E9D9C5;
+}
+
+.nosotros p {
+    max-width: 750px;
+    margin: 15px auto;
+    line-height: 1.8;
+}
+
+/* SECCION CONTACTO */
+
+.contacto {
+    background-color: #F3E9D9;
+}
+
+.contacto p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.datos-contacto {
+    margin-top: 35px;
+}
+
+.datos-contacto h3 {
+    color: #65432F;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.datos-contacto p {
+    font-size: 20px;
+    color: #493323;
+    font-weight: bold;
+}
+
+.botones-contacto {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.whatsapp {
+    background-color: #65432F;
+}
+
+/* ADAPTACION A CELULARES */
+
+@media (max-width: 900px) {
+
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .producto-card img {
+        height: 220px;
+    }
+
+}
+
+
+/* PRECIOS DE PRODUCTOS */
+
+.precio {
+    color: #65432F;
+    font-size: 19px !important;
+    font-weight: bold;
+}
+
+/* BOTON VER PRODUCTO */
+
+.ver-producto {
+    background-color: #65432F;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ver-producto:hover {
+    background-color: #A47752;
+}
+
+/* CARRITO */
+
+.carrito {
+    background-color: #E9D9C5;
+    padding: 25px;
+    margin: 50px auto 0;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.carrito h2 {
+    margin-bottom: 15px;
+}
+
+.carrito p {
+    margin: 10px;
+}
+
+/* VENTANA DE COMPRA */
+
+.ventana {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.65);
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.contenido-ventana {
+    background-color: #F3E9D9;
+    width: 600px;
+    max-width: 100%;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    gap: 25px;
+    position: relative;
+    align-items: center;
+}
+
+.contenido-ventana img {
+    width: 45%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.detalles-producto {
+    flex: 1;
+    color: #493323;
+}
+
+.detalles-producto h2 {
+    margin-bottom: 15px;
+}
+
+.detalles-producto p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.detalles-producto h3 {
+    margin-bottom: 20px;
+    color: #65432F;
+}
+
+.detalles-producto input {
+    display: block;
+    width: 70px;
+    padding: 10px;
+    margin: 10px 0 20px;
+}
+
+/* BOTON AGREGAR */
+
+.agregar-carrito {
+    background-color: #65432F;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.agregar-carrito:hover {
+    background-color: #A47752;
+}
+
+/* BOTON CERRAR */
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #493323;
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .contenido-ventana {
+        flex-direction: column;
+        max-width: 400px;
+    }
+
+    .contenido-ventana img {
+        width: 100%;
+        height: 180px;
+    }
+
+}
+
